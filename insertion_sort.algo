@@ -1,3 +1,4 @@
+//procedure of sorting the cards
 PROCEDURE sort(var tab ARRAY_OF INTEGER, n : INTEGER)
 VAR
     i,j : INTEGER; //counters
@@ -6,11 +7,12 @@ BEGIN
     FOR i FROM 1 TO n STEP 1  DO
         a := tab [i];
         j=i-1;
-        //sorting the cards 
+        //moving the > card one position ahead 
         WHILE (j>=0 and a<tab[j]) DO
             tab[j+1]:=tab[j];
             j:=j-1;
         END_WHILE
+        //placing the < card in their place
         tab[j+1]:= a;
     END_FOR
 END
