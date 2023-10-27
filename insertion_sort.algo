@@ -1,0 +1,43 @@
+PROCEDURE sort(var tab ARRAY_OF INTEGER, n : INTEGER)
+VAR
+    i,j : INTEGER; //counters
+    a:INTEGER; //varible of permutation 
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        a := tab [i];
+        j=i-1;
+        //sorting the cards 
+        WHILE (j>=0 and a<tab[j]) DO
+            tab[j+1]:=tab[j];
+            j:=j-1;
+        END_WHILE
+        tab[j+1]:= a;
+    END_FOR
+END
+
+ALGORITHM insertion_sort
+VAR
+    card : ARRAY_OF INTEGER[10];
+    n : INTEGER:
+BEGIN
+    //entering the number of the cards
+    REPEAT
+        Write("enter how many cards you have");
+        read(n);
+    UNTIL (n>0);
+
+    //filling the cards
+    FOR i FROM 1 TO n STEP 1  DO
+        Write("card [",i,"]=");
+        read(card[i]);
+    END_FOR
+
+    //sorting the cards 
+    sort(card,n);
+
+    //showing the sorted cards
+    Write("the sorted cards")
+    FOR i FROM 1 TO n STEP 1  DO
+        Write(card[i])
+    END_FOR
+END
