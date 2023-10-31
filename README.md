@@ -1,23 +1,35 @@
 # Sorting-and-searching-algorithms
 
-Example: 
+## Description
+The "Card Sorting Algorithm" is a simple program that allows you to sort a collection of cards represented as an array of integers using the insertion sort algorithm. The program includes a `sort` procedure for sorting the cards and an `insertion_sort` algorithm that interacts with the user to input and display the sorted cards.
 
-cards: 2 1 3 4 5 6
+## Usage
+You can use the "Card Sorting Algorithm" program to sort a set of cards by following these steps:
 
-for i = 2 -> j = 1
+1. Enter the number of cards you want to sort.
+2. Input the values of the cards one by one.
+3. The program will then sort the cards using the insertion sort algorithm.
+4. It will display the sorted cards.
 
-a = 1
+### Example
+Suppose you want to sort a set of cards with the values `[5, 2, 9, 1, 4]`. After entering the values and running the program, it will display the following output:
 
-tab[j] = 2
+Enter how many cards you have: 5
 
-a < tab[j] 
+Card [1] = 5
 
-moving tab[j] one position ahead 
+Card [2] = 2
 
-cards: . 2  3 4 5 6
+Card [3] = 9
 
-j = 0
+Card [4] = 1
 
-tab[j+1] = a = 1
+Card [5] = 4
 
-Result: 1 2 3 4 5 6 
+The sorted cards:
+1
+2
+4
+5
+9
+
